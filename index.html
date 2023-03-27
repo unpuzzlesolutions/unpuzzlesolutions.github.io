@@ -1,1 +1,128 @@
-// todo...
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>ZendApps - Zendesk Applications</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" />
+      <style>
+         body {
+         font-family: Arial, sans-serif;
+         background-color: #f5f5f5;
+         padding-top: 70px;
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="#">ZendApps</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#products">Products</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contact">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main class="container">
+         <section id="home">
+            <div class="jumbotron">
+               <h1 class="display-4">Welcome to ZendApps!</h1>
+               <p class="lead">We create innovative applications for the Zendesk marketplace.</p>
+            </div>
+         </section>
+         <section id="about">
+            <div class="row mb-5">
+               <div class="col-md-8 mx-auto">
+                  <h2 class="text-center mb-4">About Us</h2>
+                  <p class="text-center">ZendApps is a software company dedicated to providing businesses with the tools they need to streamline their customer support processes. Our team of experienced developers specializes in creating applications for the Zendesk platform, and we are committed to delivering high-quality solutions that meet the unique needs of our clients.</p>
+               </div>
+            </div>
+         </section>
+         <section id="products">
+            <div class="row mb-5">
+               <div class="col-md-8 mx-auto">
+                  <h2 class="text-center mb-4">Our Products</h2>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-8 mx-auto">
+                  <div class="card mb-3">
+                     <div class="card-body">
+                        <h3 class="card-title">Audio Recorder</h3>
+                        <p class="card-text">Record audio messages and attach them to Zendesk tickets using only your web browser with our Audio Recorder application. This powerful tool allows you to easily capture customer feedback, troubleshoot technical issues, and provide personalized responses to your clients. With its intuitive interface and robust feature set, Audio Recorder is the perfect addition to any customer support team.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="contact">
+            <div class="row mb-5">
+               <div class="col-md-8 mx-auto">
+                  <h2 class="text-center mb-4">Contact Us</h2>
+                  <p class="text-center">Have a question about our products or services? Interested in working with us? We'd love to hear from you. Fill out the form below and one of our representatives will be in touch with you shortly.</p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-8 mx-auto">
+                  <form action="#" method="post">
+                     <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                     </div>
+                     <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                     </div>
+                     <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                     </div>
+                     <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="bg-light text-center py-3">
+         <div class="container">
+            <p>&copy; 2023 ZendApps. All rights reserved.</p>
+            <ul class="list-inline">
+               <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+         </div>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+      <script>
+         $(document).ready(function() {
+         	$("nav").find("a").click(function(e) {
+         		e.preventDefault();
+         		var section = $(this).attr("href");
+         		$("html, body").animate({
+         			scrollTop: $(section).offset().top - 69
+         		});
+         	});
+         });
+      </script>
+   </body>
+</html>
